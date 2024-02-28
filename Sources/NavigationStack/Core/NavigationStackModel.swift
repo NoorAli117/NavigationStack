@@ -78,7 +78,7 @@ public class NavigationStackModel<IdentifierType>: ObservableObject where Identi
 
 		if let navigationStackNode = navigationStackNode, navigationStackNode.getNode(newNode.identifer) != nil {
 			if silenceErrors { return }
-			fatalError("Replacing showing navigation view '\(newNode.identifer)' not allowed")
+//			fatalError("Replacing showing navigation view '\(newNode.identifer)' not allowed")
 		} else if let navigationStackNode = navigationStackNode, let leafNode = navigationStackNode.getLeafNode() {
 			leafNode.nextNode = newNode
 		} else {
